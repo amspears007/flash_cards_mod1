@@ -32,4 +32,13 @@ class Round
     end
     correct_by_cat.count
   end
+
+  def percent_correct
+    number_correct.to_f/turns.count.to_f * 100.0
+  end
+
+  def percent_correct_by_category(category)
+    # require 'pry'; binding.pry
+    number_correct_by_category(category).to_f/number_correct.to_f * 100.0
+  end
 end
