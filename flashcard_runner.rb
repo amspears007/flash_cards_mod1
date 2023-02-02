@@ -6,7 +6,7 @@ require'./lib/round'
 require 'rspec'
 
 
-
+def start
     card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
     card_2 = Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM)
     card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
@@ -20,11 +20,11 @@ require 'rspec'
     puts "Welcome! You're playing with #{deck.cards.count} cards."
     puts "-------------------------------------------------------"
     
-    6.times do
-    #until deck.cards.count == 0
+  6.times do
     
     puts "This is card number #{round.turns.count + 1} out of #{deck.cards.count}"
     puts "Question: #{round.current_card.question}"
+    # require 'pry'; binding.pry
 
     user_guess = gets.chomp
 
@@ -34,6 +34,10 @@ require 'rspec'
  
     puts turn.feedback
   end
+end
+start
+
+
     
 
 

@@ -1,19 +1,20 @@
 class Round
-  attr_reader :deck, :turns
+  attr_reader :deck, :turns, :counter
 
   def initialize(deck)
     @deck = deck
     @turns = []
+    @counter = 1
   end
 
   def current_card
-    deck.cards[0]
+    deck.cards[@counter - 1]
   end
 
   def take_turn(guess)
     new_turn = Turn.new(guess, current_card)
     @turns << new_turn
-    deck.cards.rotate
+    @counter += 1
     new_turn
   end
 
