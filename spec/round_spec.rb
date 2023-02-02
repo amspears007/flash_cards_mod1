@@ -1,7 +1,4 @@
-require './lib/card'
-require './lib/turn'
-require './lib/deck'
-require'./lib/round'
+require 'spec_helper'
 
 RSpec.describe Round do
   it 'exists, has a deck and starts with no turns' do

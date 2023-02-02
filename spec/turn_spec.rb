@@ -1,5 +1,4 @@
-require './lib/turn'
-require './lib/card'
+require 'spec_helper'
 
 RSpec.describe Turn do
   it 'exists and has a guess and a card' do
@@ -26,8 +25,5 @@ RSpec.describe Turn do
     expect(turn.guess).to eq("Saturn")
     expect(turn.correct?).to eq(false)
     expect(turn.feedback).to eq("Incorrect.")
-
-
-
   end
 end

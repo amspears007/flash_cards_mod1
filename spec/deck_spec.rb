@@ -1,6 +1,4 @@
-require './lib/deck'
-# require'./lib/turn'
-require './lib/card'
+require 'spec_helper'
 
 RSpec.describe Deck do
   it 'exists' do
