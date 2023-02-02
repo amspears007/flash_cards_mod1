@@ -19,7 +19,24 @@ require 'rspec'
     
     puts "Welcome! You're playing with #{deck.cards.count} cards."
     puts "-------------------------------------------------------"
-  
+    
+    6.times do
+    #until deck.cards.count == 0
+    
+    puts "This is card number #{round.turns.count + 1} out of #{deck.cards.count}"
+    puts "Question: #{round.current_card.question}"
+
+    user_guess = gets.chomp
+
+    turn = round.take_turn(user_guess)
+    # require 'pry'; binding.pry
+    #puts user_guess.card.answer
+ 
+    puts turn.feedback
+  end
+    
+
+
   
 
 
